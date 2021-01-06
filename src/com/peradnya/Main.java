@@ -1,7 +1,10 @@
 package com.peradnya;
 
+import com.peradnya.view.TerminalView;
+
 public class Main {
     public static void main(String[] args) {
-	// write your code here
+        TerminalView view = new TerminalView();
+        view.show();
     }
 }
