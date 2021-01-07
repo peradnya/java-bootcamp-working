@@ -1,6 +1,9 @@
 package com.peradnya.manager;
 
+import com.peradnya.model.Summary;
+import com.peradnya.model.Transfer;
+
 public interface Bank {
-    void withdraw(String sessionId, long number) throws Exception;
-    void transfer(String sessionId, String destinationAccountNumber, long number) throws Exception;
+    Summary withdraw(String sessionId, long number) throws Exception;
+    Summary transfer(String sessionId, Transfer transfer) throws Exception;
 }

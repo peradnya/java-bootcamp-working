@@ -8,7 +8,15 @@ public class DatabaseImpl implements Database{
     private final HashMap<String, Account> database;
 
     public DatabaseImpl() {
+        Account[] accounts = {
+                new Account("John Due", "012108", 100, "112233"),
+                new Account("Jane Doe", "932012", 30, "112244")
+        };
+
         database = new HashMap<String, Account>();
+        for (Account account : accounts) {
+            database.put(account.getAccountNumber(), account);
+        }
     }
 
     @Override
@@ -32,7 +40,7 @@ public class DatabaseImpl implements Database{
         if (account != null) {
             return account;
         } else {
-            throw new Exception();
+            throw new Exception("Account not available");
         }
     }
 }

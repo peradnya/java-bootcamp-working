@@ -9,7 +9,6 @@ public enum Page {
     TRANSFER_2,
     TRANSFER_3,
     TRANSFER_4,
-    SUMMARY_WITHDRAW,
-    SUMMARY_TRANSFER,
+    SUMMARY,
     EXIT,
 }

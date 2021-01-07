@@ -1,6 +1,7 @@
 package com.peradnya.model;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class Withdraw implements Summary {
     private String sourceAccountNumber;
@@ -37,6 +38,11 @@ public class Withdraw implements Summary {
 
     @Override
     public String print() {
-        return "";
+        DateTimeFormatter format = DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm a");
+
+        return "Summary\n" +
+                "Date : " + dateTime.format(format) + "\n" +
+                "Withdraw : $" + credit + "\n" +
+                "Balance : $" + balance + "\n";
     }
 }

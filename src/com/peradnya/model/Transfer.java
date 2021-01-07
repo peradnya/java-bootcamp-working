@@ -1,6 +1,7 @@
 package com.peradnya.model;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class Transfer implements Summary {
     private String sourceAccountNumber;
@@ -41,7 +42,11 @@ public class Transfer implements Summary {
 
     @Override
     public String print() {
-        return "";
+        return "Fund Transfer Summary\n" +
+                "Destination Account : " + destinationAccountNumber + "\n" +
+                "Transfer Amount     : $" + credit + "\n" +
+                "Reference Number    : " + referenceNumber + "\n" +
+                "Balance             : $" + balance + "\n";
     }
 
     public String getDestinationAccountNumber() {

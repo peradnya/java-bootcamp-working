@@ -22,7 +22,7 @@ public class SessionImpl implements Session {
             sessions.put(uuid, accountNumber);
             return uuid;
         } else {
-            throw new Exception();
+            throw new Exception("Invalid pin");
         }
     }
 
